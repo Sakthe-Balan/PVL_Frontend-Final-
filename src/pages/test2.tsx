@@ -1,85 +1,78 @@
 import Head from "next/head";
 import Sidebar from "./components/sidebar";
-import Side from "./components/side1";
-import Card from "./components/card";
-import Search from "./components/search";
+import Card from "./components/card1";
+import Banner from "./components/banner";
 
 export default function test2() {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full bg-white">
       <div className="w-full flex justify-between">
         <Sidebar />
-        <div className="w-full mx-12 my-8">
-          <div className="flex flex-wrap justify-between">
+        <div className="w-full mx-28 my-8 ">
+          <div className="flex flex-wrap justify-evenly w-full">
+            <Banner
+              color={"orange"}
+              title={"STUDENTS"}
+              number={26}
+              icon={""}
+            ></Banner>
+
+            <Banner
+              color={"sky"}
+              title={"DEPARTMENTS"}
+              number={5}
+              icon={""}
+            ></Banner>
+            <Banner
+              color={"green"}
+              title={"PLACEMENTS"}
+              number={0}
+              icon={""}
+            ></Banner>
+          </div>
+          <button className="text-white font-semibold text-md px-3 py-2 rounded-md my-2 bg-orange-500 align">
+            Share with Recruiters <i className="uil uil-share"></i>
+          </button>
+
+          <p className="text-green-600 text-xl font-bold my-8">
+            Upcoming Placement Opportunities
+          </p>
+          <div className="flex flex-wrap justify-between w-full">
             <div>
-              <span className="text-gray-400 text-md">Assert Admin &#62;</span>
-              <span className="text-gray-700 font-semibold">
-                Manage Categories
-              </span>
+              <p className="text-blue-500 font-bold text-lg my-2">
+                Placement tests
+              </p>
+              <p className="text-gray-500 font-semibold text-md my-2">
+                No Placement Tests Scheduled Yet
+              </p>
             </div>
-            <button className="text-white font-semibold text-md bg-purple-600 px-3 py-1 rounded-md my-2">
-              <i className="uil uil-plus"></i> Add Category
-            </button>
+            <div>
+              <p className="text-blue-500 font-bold text-lg my-2">
+                Pre-Assessments
+              </p>
+              <p className="text-gray-500 font-semibold text-md my-2">
+                No Pre-Assessments Tests Scheduled Yet
+              </p>
+            </div>
           </div>
-          <div className=" flex w-full   flex-wrap align-middle ">
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Finance
-            </span>
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Electronics
-            </span>
-
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Media and Communication
-            </span>
-
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Software Services
-            </span>
-
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Human Resource
-            </span>
-
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Marketing
-            </span>
-
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Construction
-            </span>
-
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Teaching
-            </span>
-
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Business Development
-            </span>
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Soft Skills
-            </span>
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Management
-            </span>
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Entrepreneurship
-            </span>
-            <span className="bg-gray-300 text-gray-700 text-base p-3 rounded-full my-2">
-              Custom
-            </span>
-          </div>
-          <div className="flex flex-wrap justify-between align-middle my-6">
-            <span className="text-purple-700 font-bold">
-              Certificates under the category
-            </span>
-            <Search />
-          </div>
-          <div className="flex flex-wrap justify-around my-6 width-40">
-            <Card titleMain={"Accounts Finance"} number={7} />
-            <Card titleMain={"Taxation Finance"} number={4} />
-            <Card titleMain={"Finance"} number={5} />
-            <Card titleMain={"Financial Market"} number={0} />
+          <div className="flex w-full justify-between my-4 flex-wrap align-middle">
+            
+            <Card
+              title={'Placement Exams History'}
+              percent={'3.8%'}
+              title1={'Total Students Attempted'}
+              title2={'Total Students Cleared'}
+              val1={1}
+              val2={1}
+            ></Card>
+            <Card
+              title={'Pre-Assessments Report'}
+              percent={'30.8%'}
+              title1={'Total Students Attempted'}
+              title2={'Total Students Cleared'}
+              val1={86}
+              val2={8}
+            ></Card>
           </div>
         </div>
       </div>
